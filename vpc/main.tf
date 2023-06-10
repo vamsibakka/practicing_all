@@ -12,7 +12,7 @@ resource "aws_subnet" "subnet1"{
         Name = "subnet1"
     }
 }
-resource "aws_internet_gateway" " gateway1"{
+resource "aws_internet_gateway" "gateway1"{
     vpc_id = aws_vpc.testvpc.id
     tags={
         Name = "gateway1"
@@ -25,7 +25,7 @@ resource "aws_route_table" "routetbl1"{
         gateway_id = aws_internet_gateway.gateway1.id
     }
 }
-resource "aws_route_table_association" " tableasso"{
+resource "aws_route_table_association" "tableasso"{
     subnet_id= aws_subnet.subnet1.id
     route_table_id = aws_route_table.routetbl1.id
 }
