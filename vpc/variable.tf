@@ -6,5 +6,5 @@ variable "cidr"{
 variable "subcidr"{
     type = string
     description = "this is subnet cidr"
-    default = "192.168.0.0/32"
+    default = "192.168.0.0/25"
 }
