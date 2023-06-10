@@ -7,6 +7,7 @@ resource "aws_vpc" "testvpc" {
 resource "aws_subnet" "subnet1"{
     cidr_block = var.subcidr
     vpc_id = aws_vpc.testvpc.id 
+    availability_zone = "us-east-1a"
     tags= {
         Name = "subnet1"
     }
